@@ -27,7 +27,7 @@ public class StudentController {
             Optional<Student> studentOptional = studentRepository.findById(id);
 
             if (studentOptional.isPresent()) {
-                return new ResponseEntity<>(studentOptional.get(), HttpStatus.FOUND);
+                return new ResponseEntity<>(studentOptional.get(), HttpStatus.OK);
             } else {
                 return new ResponseEntity<>(HttpStatus.NOT_FOUND);
             }
